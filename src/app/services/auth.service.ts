@@ -37,7 +37,6 @@ export class AuthService {
       switchMap(route => route?.data ?? of({ authOnly: false }))
     ).subscribe((data) => this.redirect = data.authOnly ?? false)
 
-
   }
 
   public async createUser(userData: IUser) {
